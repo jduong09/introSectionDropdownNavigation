@@ -1,4 +1,5 @@
 body {
+  min-height: 100vh;
   font-family: 'Epilogue', sans-serif;
   color: hsl(0, 0%, 8%);
 }
@@ -54,16 +55,30 @@ header {
 #icon-close-menu {
   width: 26px;
   height: auto;
+  margin: 1rem;
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem 1rem 0 0;
 }
 
 .drawer-menu {
+  display: inline-block;
   margin-top: 10%;
   padding: 2rem;
+}
+
+.drawer-menu img {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.drawer-menu span {
+  cursor: pointer;
+}
+
+.drawer-menu span:hover {
+  color: hsl(0, 0%, 8%);
 }
 
 .nav-desktop {
@@ -83,7 +98,7 @@ header {
 #feature-arrow-down, #company-arrow-down {
   width: 10px;
   height: auto;
-  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
 .show-sublist {
@@ -98,25 +113,25 @@ header {
 #icon-todo-list {
   width: 14px;
   height: auto;
-  padding-right: .5rem;
+  margin-left: .5rem;
 }
 
 #icon-calendar {
   width: 16px;
   height: auto;
-  padding-right: .5rem;
+  margin-left: .5rem;
 }
 
 #icon-reminder {
   width: 13px;
   height: auto;
-  padding-right: .5rem;
+  margin-left: .5rem;
 }
 
 #icon-planning {
   width: 16px;
   height: auto;
-  padding-right: .5rem;
+  margin-left: .5rem;
 }
 
 .drawer-menu > li {
@@ -137,6 +152,10 @@ header {
 }
 
 /* Main Tag */
+main {
+  display: flex;
+  flex-direction: column;
+}
 
 .app-intro {
   width: 95%;
@@ -158,16 +177,21 @@ header {
 }
 
 #btn-learn-more {
-  background-color: hsl(0, 0%, 8%);
-  color: hsl(0, 0%, 98%);
+  margin-bottom: 3rem;
   padding: 1rem 1.5rem;
+  background-color: hsl(0, 0%, 8%);
+  border: 1px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
   border-radius: 1rem;
   cursor: pointer;
 }
 
-/* Footer */
+#btn-learn-more:hover {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
 
-.footer-client-list {
+.client-list {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -192,4 +216,41 @@ header {
 #logo-maker {
   width: 63px;
   height: auto;
+}
+
+/* Tablet/Desktop media query */
+@media (min-width: 575px) {
+  /* Header */
+
+  /* Main */
+  main {
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+
+  .hero-image-container {
+    width: 50%;
+    order: 2;
+  }
+  #hero-image {
+    content: url('../images/image-hero-desktop.png');
+  }
+
+  .app-intro {
+    margin: 0;
+    width: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: space-between;
+  }
+
+  .app-intro > h2 {
+    font-size: 3rem;
+  }
 }

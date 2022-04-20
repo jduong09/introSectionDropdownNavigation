@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainTag = document.getElementsByTagName('main')[0];
   const featureArrow = document.getElementById('feature-arrow-down');
   const companyArrow = document.getElementById('company-arrow-down');
+  const drawerSublist = document.getElementsByClassName('drawer-sublist');
 
   navHamburger.addEventListener('click', () => {
     if (drawer.classList.contains('drawer-hide')) {
@@ -31,16 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const drawerArrows = [featureArrow, companyArrow];
 
-  for (let i = 0; i < drawerArrows.length; i++) {
+  for (let i = 0; i < drawerSublist.length; i++) {
     const headerName = drawerArrows[i].id.split('-')[0];
     const headerSublist = document.getElementById(`${headerName}-sublist`);
-    drawerArrows[i].addEventListener('click', () => {
-      if (!drawerArrows[i].classList.contains('show-sublist')) {
+    drawerSublist[i].addEventListener('click', () => {
+      const childArrowTag = drawerSublist[i].children[1];
+      if (!childArrowTag.classList.contains('show-sublist')) {
         headerSublist.classList.remove('hide');
-        drawerArrows[i].classList.add('show-sublist');
+        childArrowTag.classList.add('show-sublist');
       } else {
         headerSublist.classList.add('hide');
-        drawerArrows[i].classList.remove('show-sublist');
+        childArrowTag.classList.remove('show-sublist');
       }
     });
   }
