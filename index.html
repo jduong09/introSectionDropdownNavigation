@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <script type="text/javascript" src="js/menu.js" ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <header>
+    <h1><img id="logo" src="images/logo.svg" alt="logo - text is snap" /></h1>
+    <nav>
+      <img id="icon-menu" src="images/icon-menu.svg" alt="icon-nav-hamburger" />
+      <div id="drawer" class="drawer-hide">
+        <img id="icon-close-menu" src="images/icon-close-menu.svg" alt="icon-close-menu-x" />
+        <ul class="drawer-menu">
+          <li>
+            <div class="drawer-sublist">
+              <span>Features</span>
+              <img id="feature-arrow-down" src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
+            </div>
+            <ul id="feature-sublist" class="sublist hide">
+              <li><img id="icon-todo-list" src="images/icon-todo.svg" alt="icon-todo" />Todo List</li>
+              <li><img id="icon-calendar" src="images/icon-calendar.svg" alt="icon-calendar" />Calendar</li>
+              <li><img id="icon-reminder" src="images/icon-reminders.svg" alt="icon-reminder" />Reminders</li>
+              <li><img id="icon-planning" src="images/icon-planning.svg" alt="icon-planning" />Planning</li>
+            </ul>
+          </li>
+          <li>
+            <div class="drawer-sublist">
+              <span>Company</span>
+              <img id="company-arrow-down" src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
+            </div>
+            <ul id="company-sublist" class="sublist hide">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <ul class="nav-desktop">
+          <li>Login</li>
+          <li>Register</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <img id="hero-image" src="images/image-hero-mobile.png" alt="man holding laptop" />
+    <div class="app-intro">
+      <h2>Make remote work</h2>
+      <div>Get your turn in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</div>
+      <label>
+        <input id="btn-learn-more" type="button" value="Learn more" />
+      </label>
+    </div>
+  </main>
+  <footer>
+    <ul class="footer-client-list">
+      <li><img id="logo-databiz" src="images/client-databiz.svg" alt="logo of client databiz" /></li>
+      <li><img id="logo-audiophile" src="images/client-audiophile.svg" alt="logo of client audiophile" /></li>
+      <li><img id="logo-meet" src="images/client-meet.svg" alt="logo of client meet" /></li>
+      <li><img id="logo-maker" src="images/client-maker.svg" alt="logo of client maker" /></li>
+    </ul>
+  </footer>
+</body>
+</html>

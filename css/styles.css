@@ -1,0 +1,195 @@
+body {
+  font-family: 'Epilogue', sans-serif;
+  color: hsl(0, 0%, 8%);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+#logo {
+  width: 84px;
+  height: auto;
+}
+
+#icon-menu {
+  width: 32px;
+  height: auto;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.drawer-hide {
+  display: none;
+}
+
+.drawer-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height:100vh;
+  background-color: hsl( 0, 100%, 100%);
+  z-index: 2;
+  animation-name: draweropen;
+  animation-duration: .5s;
+}
+
+@keyframes draweropen {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
+#icon-close-menu {
+  width: 26px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 1rem 0 0;
+}
+
+.drawer-menu {
+  margin-top: 10%;
+  padding: 2rem;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#feature-arrow-down, #company-arrow-down {
+  width: 10px;
+  height: auto;
+  padding-left: 1rem;
+}
+
+.show-sublist {
+  content: url('../images/icon-arrow-up.svg');
+}
+
+.drawer-sublist {
+  display: flex;
+  align-items: center;
+}
+
+#icon-todo-list {
+  width: 14px;
+  height: auto;
+  padding-right: .5rem;
+}
+
+#icon-calendar {
+  width: 16px;
+  height: auto;
+  padding-right: .5rem;
+}
+
+#icon-reminder {
+  width: 13px;
+  height: auto;
+  padding-right: .5rem;
+}
+
+#icon-planning {
+  width: 16px;
+  height: auto;
+  padding-right: .5rem;
+}
+
+.drawer-menu > li {
+  padding: 1.5rem 0;
+  color: hsl(0, 0%, 41%);
+}
+
+.sublist {
+  padding: 1.5rem 1rem 0 1rem;
+}
+
+.sublist > li {
+  padding-bottom: 1rem;
+}
+
+.sublist > li:last-child {
+  padding-bottom: 0;
+}
+
+/* Main Tag */
+
+.app-intro {
+  width: 95%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.app-intro > h2 {
+  font-size: 2.125rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.app-intro > div {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: hsl(0, 0%, 41%);
+}
+
+#btn-learn-more {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer-client-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#logo-databiz {
+  width: 94px;
+  height: auto;
+}
+
+#logo-audiophile {
+  width: 53px;
+  height: auto;
+}
+
+#logo-meet {
+  width: 70px;
+  height: auto;
+}
+
+#logo-maker {
+  width: 63px;
+  height: auto;
+}
