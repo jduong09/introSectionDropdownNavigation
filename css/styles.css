@@ -180,7 +180,7 @@ main {
   margin-bottom: 3rem;
   padding: 1rem 1.5rem;
   background-color: hsl(0, 0%, 8%);
-  border: 1px solid hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 8%);
   color: hsl(0, 0%, 98%);
   border-radius: 1rem;
   cursor: pointer;
@@ -221,23 +221,122 @@ main {
 /* Tablet/Desktop media query */
 @media (min-width: 575px) {
   /* Header */
+  header {
+    height: 10vh;
+  }
+
+  h1 {
+    width: 10%;
+    padding-left: 2rem;
+    margin: auto;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  #icon-menu {
+    display: none;
+  }
+
+  #icon-close-menu {
+    display: none;
+  }
+
+  .drawer-hide {
+    display: block;
+  }
+
+  #drawer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .drawer-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .drawer-menu > li {
+    padding: 0 0 0 2rem;
+    position: relative;
+  }
+
+  #feature-arrow-down, #company-arrow-down {
+    margin: 0;
+  }
+
+  .sublist {
+    padding: 1rem;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 2;
+    border: 1px solid hsl(0, 0%, 98%);
+    border-radius: 10px;
+    box-shadow: 0 1rem 3rem rgba( 0, 0, 0, .175);
+  }
+
+  #company-sublist {
+    right: initial;
+    width: 100%;
+  }
+
+  .sublist > li {
+    display: flex;
+    align-items: center;
+  }
+
+  #icon-todo-list, #icon-calendar, #icon-reminder, #icon-planning {
+    margin-left: 0;
+    margin-right: .5rem;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+  }
+
+  .nav-desktop > li {
+    padding-right: 2rem;
+  }
+  
+  .nav-desktop > li:hover {
+    padding-right: 2rem;
+    color: hsl(0, 0%, 8%);
+  }
+
+  #btn-register {
+    padding: 1rem 1.5rem;
+    border: 2px solid hsl(0, 0%, 41%);
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 1rem;
+  }
+
+  #btn-register:hover {
+    border-color: hsl(0, 0%, 8%);
+  }
 
   /* Main */
   main {
     flex-direction: row;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
+    height: 70vh;
+    padding: 2.5rem 10rem 7.5rem 10rem;
   }
 
   .hero-image-container {
     width: 50%;
+    margin-left: 5rem;
     order: 2;
   }
   #hero-image {
     content: url('../images/image-hero-desktop.png');
+    width: auto;
+    height: 100%;
   }
 
   .app-intro {
@@ -246,11 +345,23 @@ main {
     text-align: start;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-self: space-between;
+    justify-content: flex-start;
+    position: relative;
   }
 
   .app-intro > h2 {
-    font-size: 3rem;
+    padding: 5.5rem 0 2.5rem 0;
+    font-size: 4.8rem;
+  }
+
+  .app-intro > div {
+    font-size: 1.125rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .client-list {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
   }
 }
